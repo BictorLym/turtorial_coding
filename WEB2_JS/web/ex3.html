@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+  <title></title>
+  <meta charset = "utf-8">
+  <script>
+    function nightDayHandler(self){
+      var target = document.querySelector('body');
+      if(self.value==='night'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        self.value='day';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i<alist.length){
+          alist[i].style.color = 'powderblue';
+          i = i + 1;
+        }
+      }
+      else{
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        self.value='night';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i<alist.length){
+          alist[i].style.color = 'blue';
+          i = i + 1;
+        }
+      }
+    }
+  </script>
+</head>
+  <!-- <style>
+    .js{
+      font-weight: bold;
+      color: red;
+    }
+    #first{
+      color:green;
+    }
+    span{
+      color:blue;
+    }
+  </style> -->
+<body>
+  <h1><a href="index.html">WEB</a></h1>
+  <!-- <input type="button" value='Night' onclick="
+
+  document.querySelector('body').style.backgroundColor = 'black';
+  document.querySelector('body').style.color = 'white';
+  ">
+  <input type="button" value='day' onclick="
+  document.querySelector('body').style.backgroundColor = 'white';
+  document.querySelector('body').style.color = 'black';
+  ">
+  <input id="night_day" type="button" value="night" onclick="
+    if(document.querySelector('#night_day').value==='night'){
+      document.querySelector('body').style.backgroundColor = 'black';
+      document.querySelector('body').style.color = 'white';
+      document.querySelector('#night_day').value='day';
+    }
+    else{
+      document.querySelector('body').style.backgroundColor = 'white';
+      document.querySelector('body').style.color = 'black';
+      document.querySelector('#night_day').value='night';
+    }
+  "> -->
+  <input type="button" value="night" onclick="
+  nightDayHandler(this);
+  ">
+  <ol>
+    <li><a href="1.html">html</a></li>
+    <li><a href="2.html">css</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+  </ol>
+  <h2 style="background-color: coral; color:powderblue">JavaScript</h2>
+  <p>
+    <span id="first" class="js">JavaScript</span> (/ˈdʒɑːvəskrɪpt/),[10] often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside <span>HTML</span> and <span>CSS</span>.[11] As of 2022, 98% of websites use <span class="js">JavaScript</span> on the client side for web page behavior,[12] often incorporating third-party libraries.[13] All major web browsers have a dedicated <span class="js">JavaScript</span> engine to execute the code on users' devices. <span class="js">JavaScript</span> is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard.[14] It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). The ECMAScript standard does not include any input/output (I/O), such as networking, storage, or graphics facilities. In practice, the web browser or other runtime system provides <span class="js">JavaScript</span> APIs for I/O. <span class="js">JavaScript</span> engines were originally used only in web browsers, but are now core components of some servers and a variety of applications. The most popular runtime system for this usage is Node.js. Although Java and <span class="js">JavaScript</span> are similar in name, syntax, and respective standard libraries, the two languages are distinct and differ greatly in design.
+  </p>
+  <input type="button" value="night" onclick="
+    nightDayHandler(self);
+  ">
+  <input type="button" value="night" onclick="
+    if(this.value==='night'){
+      document.querySelector('body').style.backgroundColor = 'black';
+      document.querySelector('body').style.color = 'white';
+      this.value='day';
+
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i<alist.length){
+        alist[i].style.color = 'powderblue';
+        i = i + 1;
+      }
+    }
+    else{
+      document.querySelector('body').style.backgroundColor = 'white';
+      document.querySelector('body').style.color = 'black';
+      this.value='night';
+
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i<alist.length){
+        alist[i].style.color = 'blue';
+        i = i + 1;
+      }
+    }
+  ">
+</body>
+</html>
